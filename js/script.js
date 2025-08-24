@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    window.history.scrollRestoration = "manual";
-    window.scrollTo(0, 0);
+    // window.history.scrollRestoration = "manual";
+    // window.scrollTo(0, 0);
 
     const langBtn = document.getElementById("langBtn");
     let currentLang = "en";
