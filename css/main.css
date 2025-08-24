@@ -514,15 +514,23 @@ html[dir="rtl"] .thm-btn>span>i {
 .about-one__round-text-box {
     position: relative;
     margin-top: 50px;
-    left: 30%;
+    left: 25%;
     width: 180px;
     height: 180px;
     border-radius: 50%;
     background-color: var(--tanspot-base);
     z-index: 5;
 }
+@media screen and (min-width:455px) {
+    .about-one__round-text-box {
+    left: 30%;
+}
 html[dir="rtl"] .about-one__round-text-box {
     left: -30%;
+}
+}
+html[dir="rtl"] .about-one__round-text-box {
+    left: -25%;
 }
 .about-one__round-text-box .inner {
     position: relative;
@@ -597,7 +605,7 @@ html[dir="rtl"] .about-one__round-text-box {
     color: var(--tanspot-base);
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 2rem;
     line-height: 18px;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -635,4 +643,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px;
     height: 100%;
     border-radius: 20px;
+}
+.about-one p{
+    text-align: justify;
 }
