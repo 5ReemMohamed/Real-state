@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" dir="lrt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-ar="الفيافي للخدمات اللوجستية" data-en="AL-FIAFI Logistic services">AL-FIAFI Logistic services</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link href="css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80" tabindex="0">
+
+  <nav id="navbar" class="navbar navbar-expand-xl  fixed-top">
+        <div class="container navbar-container">
+            <a class="navbar-brand fw-bold text-white" href="index.html">
+                <img src="imgs/logo.png" alt="">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                      <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mt-5 mt-xl-0 mx-auto d-flex justify-content-center align-items-center gap-3 gap-lg-4 mb-4 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="الرئيسية" data-en="Home" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="من نحن" data-en="About"  href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="المشاريع" data-en="Projects"  href="index.html#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="تشطيبات وديكور" data-en="Decorating & Finishing"  href="index.html">Decorating & Finishing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="اثاث منزلي" data-en="Furniture"  href="index.html">Furniture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="المدونة" data-en="Blogs"  href="index.html#blogs">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="الفريق" data-en="Team"  href="index.html#team">Team</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="اتصل بنا" data-en="Contact"  href="index.html#contact">Contact</a>
+                    </li>
+                   
+                </ul>
+                
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                    <button class="btn btn-outline-light btn-lang me-2" id="langBtn">
+                        <i class="fas fa-language"></i>
+                        AR
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+<section class="project-detail-section section-padding">
+        <div class="container" data-aos="fade-up" data-aos-duration="1200">
+            <div class="row pt-5">
+                <div class="col-12">
+                    <div class="project-header">
+                        <h1 class="project-title" data-ar="سكانديك بيتش ريزورت" data-en="Scandic Beach Resort">Scandic Beach Resort</h1>
+                        <p class="project-location" data-ar=" في قلب المدينه، الغردقة" data-en="in the heart of the city, Hurghada">in the heart of the city, Hurghada</p>
+                        <div class="project-badge ready text-white">
+                            <span data-ar="جاهز للتسليم الفوري" data-en="Ready for Immediate Delivery">Ready for Immediate Delivery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="image-gallery">
+                        <div class="main-image-container">
+                            <img id="mainImage" src="imgs/project-2-1.jpg" alt="Scandic Beach Resort" class="main-image">
+                            <div class="image-overlay">
+                                <button class="btn btn-light btn-sm" onclick="openFullscreen()">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="image-slider">
+                            <div class="slider-container">
+                                <div class="slider-item active" onclick="changeImage(this, 'imgs/project-2-1.jpg')">
+                                    <img src="imgs/project-2-1.jpg" alt="Main View">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-2-2.jpg')">
+                                    <img src="imgs/project-2-2.jpg" alt="Sea View">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-2-3.jpg')">
+                                    <img src="imgs/project-2-3.jpg" alt="Pool View">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-2-4.jpg')">
+                                    <img src="imgs/project-2-4.jpg" alt="Apartments">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-2-5.jpg')">
+                                    <img src="imgs/project-2-5.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-2-6.jpg')">
+                                    <img src="imgs/project-2-6.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-2-7.jpg')">
+                                    <img src="imgs/project-2-7.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-2-8.jpg')">
+                                    <img src="imgs/project-2-8.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-2-9.jpg')">
+                                    <img src="imgs/project-2-9.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-2-10.jpg')">
+                                    <img src="imgs/project-2-10.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-2-11.jpg')">
+                                    <img src="imgs/project-2-11.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-2-12.jpg')">
+                                    <img src="imgs/project-2-12.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-2-13.jpg')">
+                                    <img src="imgs/project-2-13.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-2-14.jpg')">
+                                    <img src="imgs/project-2-14.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-2-15.jpg')">
+                                    <img src="imgs/project-2-15.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-2-16.jpg')">
+                                    <img src="imgs/project-2-16.jpg" alt="Facilities">
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="detailed-description">
+                        <h2 data-ar="وصف مفصل" data-en="Detailed Description">Detailed Description</h2>
+                        <p data-ar="سكانديك ريزورت في منطقة العرب بالغردقة يقدم استوديوهات وشقق بغرفة نوم واحدة وغرفتين نوم مذهلة في مجمع راقي مع وسائل الراحة من الدرجة الأولى. عدد محدود من الوحدات المتاحة - أسرع واحجز وحدتك قبل نفاد المعروض!" data-en="Scandic Resort in Hurghada's Arabia District offers stunning studios, one-bedroom, and two-bedroom apartments in a high-end complex with top-tier amenities. Limited units available - Hurry and secure your unit before they're gone!">
+                           Scandic Resort in Hurghada's Arabia District offers stunning studios, one-bedroom, and two-bedroom apartments in a high-end complex with top-tier amenities. Limited units available - Hurry and secure your unit before they're gone!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="project-info">
+                        <div class="info-card">
+                            <h3 data-ar="نظرة عامة" data-en="Overview">Overview</h3>
+                            <p data-ar="وحدات مميزة بإطلالات خلابة على البحر والمسبح، جاهزة للتسليم الفوري. يقع في قلب المدينه بالغردقة ومسجل بعقد أخضر." data-en="Premium units with stunning sea and pool views, ready for immediate delivery. Located in the heart of the city, Hurghada and registered with a Green Contract.">
+                               Premium units with stunning sea and pool views, ready for immediate delivery. Located in the heart of the city, Hurghada and registered with a Green Contract.
+                            </p>
+                        </div>
+
+                        <div class="info-card">
+                            <h3 data-ar="المميزات" data-en="Features">Features</h3>
+                            <ul class="features-list">
+                                <li data-ar="شاطئ خاص وحمامات سباحة" data-en="Private beach & pools">Private beach & pools</li>
+                                <li data-ar="مركز لياقة بدنية ورياضات مائية" data-en="Fitness center & water sports">Fitness center & water sports</li>
+                                <li data-ar="مرافق صديقة للعائلة" data-en="Family-friendly facilities">Family-friendly facilities</li>
+                                <li data-ar="قريب من المطاعم والمحلات والمعالم السياحية" data-en="Close to restaurants, shops & attractions">Close to restaurants, shops & attractions</li>
+                                <li data-ar="10 دقائق فقط من المطار" data-en="Only 10 min from the airport">Only 10 min from the airport</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card">
+                            <h3 data-ar="أنواع الوحدات" data-en="Unit Types">Unit Types</h3>
+                            <div class="unit-types">
+                                <div class="unit-type">
+                                    <span class="unit-name" data-ar="استوديو" data-en="Studio">Studio</span>
+                                </div>
+                                <div class="unit-type">
+                                    <span class="unit-name" data-ar="غرفة نوم واحدة" data-en="One Bedroom">One Bedroom</span>
+                                </div>
+                                <div class="unit-type">
+                                    <span class="unit-name" data-ar="غرفتين نوم" data-en="Two Bedrooms">Two Bedrooms</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <h3 data-ar="خطة الدفع" data-en="Payment Plan">Payment Plan</h3>
+                            <div class="payment-plans">
+                                <div class="payment-option">
+                                    <span class="plan-details" data-ar="30% مقدم - أقساط على 3 سنوات" data-en="30% down payment - installments over 3 years">30% down payment - installments over 3 years</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="d-flex justify-content-center align-items-center mt-5">
+            <a href="index.html" class="thm-btn">
+                                   <em data-ar="العودة الي الرئيسية" data-en="Back To Home" > Back To Home</em>
+                                    <span><i class="fas fa-arrow-right"></i></span>
+            </a>
+          </div>
+            
+        </div>
+    </section>
+     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/script.js"></script>
+   
+</body>
+</html>

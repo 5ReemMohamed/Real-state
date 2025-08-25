@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" dir="lrt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-ar="الفيافي للخدمات اللوجستية" data-en="AL-FIAFI Logistic services">AL-FIAFI Logistic services</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link href="css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80" tabindex="0">
+
+  <nav id="navbar" class="navbar navbar-expand-xl  fixed-top">
+        <div class="container navbar-container">
+            <a class="navbar-brand fw-bold text-white" href="index.html">
+                <img src="imgs/logo.png" alt="">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                      <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mt-5 mt-xl-0 mx-auto d-flex justify-content-center align-items-center gap-3 gap-lg-4 mb-4 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="الرئيسية" data-en="Home" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="من نحن" data-en="About"  href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="المشاريع" data-en="Projects"  href="index.html#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="تشطيبات وديكور" data-en="Decorating & Finishing"  href="index.html">Decorating & Finishing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="اثاث منزلي" data-en="Furniture"  href="index.html">Furniture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="المدونة" data-en="Blogs"  href="index.html#blogs">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="الفريق" data-en="Team"  href="index.html#team">Team</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="اتصل بنا" data-en="Contact"  href="index.html#contact">Contact</a>
+                    </li>
+                   
+                </ul>
+                
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                    <button class="btn btn-outline-light btn-lang me-2" id="langBtn">
+                        <i class="fas fa-language"></i>
+                        AR
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+<section class="project-detail-section section-padding">
+        <div class="container" data-aos="fade-up" data-aos-duration="1200">
+            <div class="row pt-5">
+                <div class="col-12">
+                    <div class="project-header">
+                        <h1 class="project-title" data-ar="لونج بيتش ريزيدنس" data-en="Long Beach Residence">Long Beach Residence</h1>
+                        <p class="project-location" data-ar="سهل حشيش، الغردقة" data-en="Sahl Hasheesh, Hurghada">Sahl Hasheesh, Hurghada</p>
+                        <div class="project-badge new">
+                            <span data-ar="خصم إضافي 10%" data-en="Additional 10% Discount">Additional 10% Discount</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="image-gallery">
+                        <div class="main-image-container">
+                            <img id="mainImage" src="imgs/project-4-1.jpg" alt="Scandic Beach Resort" class="main-image">
+                            <div class="image-overlay">
+                                <button class="btn btn-light btn-sm" onclick="openFullscreen()">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="image-slider">
+                            <div class="slider-container">
+                                <div class="slider-item active" onclick="changeImage(this, 'imgs/project-4-1.jpg')">
+                                    <img src="imgs/project-4-1.jpg" alt="Main View">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-4-2.jpg')">
+                                    <img src="imgs/project-4-2.jpg" alt="Sea View">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-4-3.jpg')">
+                                    <img src="imgs/project-4-3.jpg" alt="Pool View">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-4-4.jpg')">
+                                    <img src="imgs/project-4-4.jpg" alt="Apartments">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-4-5.jpg')">
+                                    <img src="imgs/project-4-5.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-4-6.jpg')">
+                                    <img src="imgs/project-4-6.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-4-7.jpg')">
+                                    <img src="imgs/project-4-7.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-4-8.jpg')">
+                                    <img src="imgs/project-4-8.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-4-9.jpg')">
+                                    <img src="imgs/project-4-9.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-4-10.jpg')">
+                                    <img src="imgs/project-4-10.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-4-11.jpg')">
+                                    <img src="imgs/project-4-11.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-4-12.jpg')">
+                                    <img src="imgs/project-4-12.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-4-13.jpg')">
+                                    <img src="imgs/project-4-13.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-4-14.jpg')">
+                                    <img src="imgs/project-4-14.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-4-15.jpg')">
+                                    <img src="imgs/project-4-15.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-4-16.jpg')">
+                                    <img src="imgs/project-4-16.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-4-17.jpg')">
+                                    <img src="imgs/project-4-17.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-4-18.jpg')">
+                                    <img src="imgs/project-4-18.jpg" alt="Facilities">
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="detailed-description">
+                        <h2 data-ar="وصف مفصل" data-en="Detailed Description">وصف مفصل</h2>
+                        <p data-ar="لونج بيتش ريزيدنس سهل حشيش يخضع لتوسعة كبيرة، حيث يقدم وحدات سكنية راقية واستوديوهات وفيلات وحمامات سباحة ومنطقة تجارية ومناظر طبيعية خضراء. التوسعة تتضمن بيوت توأم حصرية وفيلات فاخرة بتصاميم حديثة ووسائل راحة مميزة. سيستمتع السكان والزوار بحمامات سباحة جذابة ومنطقة تجارية نابضة بالحياة ومناطق منسقة بشكل لا تشوبه شائبة، مما يخلق وجهة منتجع عالمية تعيد تعريف الحياة الفاخرة في الغردقة." data-en="Long Beach Residence Sahl Hasheesh is undergoing a significant expansion, introducing high-end residential units, studios, villas, pools, a commercial zone, and lush landscapes. The extension features exclusive twin houses and luxurious villas with modern designs and premium amenities. Residents and visitors will enjoy inviting pools, a vibrant commercial zone, and impeccably landscaped areas, creating a world-class resort destination that redefines luxury living in Hurghada.">
+                           Long Beach Residence Sahl Hasheesh is undergoing a significant expansion, introducing high-end residential units, studios, villas, pools, a commercial zone, and lush landscapes. The extension features exclusive twin houses and luxurious villas with modern designs and premium amenities. Residents and visitors will enjoy inviting pools, a vibrant commercial zone, and impeccably landscaped areas, creating a world-class resort destination that redefines luxury living in Hurghada.
+                        </p>
+                        <p data-ar="في لونغ بيتش ريزيدنس سهل حشيش، تتمثل رؤية المطور في إنشاء ملاذ فريد من نوعه، حيث تلتقي الفخامة بالهدوء. يطمح المطور إلى إعادة تعريف تجربة المنتجعات من خلال المزج بسلاسة بين الإقامة الفاخرة ووسائل الراحة عالمية المستوى والخدمة الممتازة. انطلاقًا من التزامنا بالمسؤولية البيئية، نهدف إلى وضع معيار جديد للمنتجعات الفاخرة، مع تعزيز لحظات لا تُنسى وذكريات خالدة في قلب البحر الأحمر." data-en="At LONG BEACH RESIDENCE SAHL HASHEESH developer vision is to create an unparalleled sanctuary where luxury meets tranquility. Developer aspire to redefine the resort experience by seamlessly blending opulent accommodations, world-class amenities, and impeccable service. Committed to environmental responsibility, we aim to set a new standard for luxury resorts while fostering unforgettable moments and lasting memories in the heart of the Red Sea.">
+                            At LONG BEACH RESIDENCE SAHL HASHEESH developer vision is to create an unparalleled sanctuary where luxury meets tranquility. Developer aspire to redefine the resort experience by seamlessly blending opulent accommodations, world-class amenities, and impeccable service. Committed to environmental responsibility, we aim to set a new standard for luxury resorts while fostering unforgettable moments and lasting memories in the heart of the Red Sea.
+                        </p>
+                        
+                        <div class="completion-info mt-4">
+                            <h4 data-ar="معلومات الإنجاز" data-en="Completion Information">Completion Information</h4>
+                            <p data-ar="بدأ البناء في يوليو 2024 وتم إنجاز حوالي 20% من البناء الرأسمالي. الإنجاز المتوقع - ديسمبر 2026!" data-en="Construction started in July 2024 and about 20% of the capital construction is already completed! Completion - December 2026!">
+                              Construction started in July 2024 and about 20% of the capital construction is already completed! Completion - December 2026!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="project-info">
+                        <div class="info-card">
+                            <h3 data-ar="نظرة عامة" data-en="Overview">Overview</h3>
+                            <p data-ar="منتجع عالمي مع إمكانية الوصول للشاطئ، وجهة تعيد تعريف الحياة الفاخرة في الغردقة. يقع أمام فندق لونج بيتش ريزورت مباشرة." data-en="World-class resort with beach access, destination that redefines luxury living in Hurghada. Located directly in front of Long Beach Resort Hotel.">
+                            World-class resort with beach access, destination that redefines luxury living in Hurghada. Located directly in front of Long Beach Resort Hotel.
+                            </p>
+                        </div>
+
+                        <div class="info-card">
+                            <h3 data-ar="الموقع المميز" data-en="Prime Location">Prime Location</h3>
+                            <ul class="features-list">
+                                <li data-ar="10 دقائق من مطار الغردقة" data-en="10 minutes from Hurghada Airport">10 minutes from Hurghada Airport</li>
+                                <li data-ar="5 دقائق من سنزو مول" data-en="5 minutes from Senzo Mall">5 minutes from Senzo Mall</li>
+                                <li data-ar="7 دقائق من سهل حشيش" data-en="7 minutes from Sahl Hasheesh">7 minutes from Sahl Hasheesh</li>
+                                <li data-ar="دقيقتان فقط من البحر" data-en="Only 2 minutes to the Sea">Only 2 minutes to the Sea</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card">
+                            <h3 data-ar="المرافق" data-en="Facilities">Facilities</h3>
+                            <ul class="features-list">
+                                <li data-ar="وصول مجاني للشاطئ من فندق لونج بيتش" data-en="Free beach access from Long Beach Resort Hotel">Free beach access from Long Beach Resort Hotel</li>
+                                <li data-ar="6 حمامات سباحة" data-en="6 swimming pools">6 swimming pools</li>
+                                <li data-ar="مستشفى مبتكر عالي الجودة" data-en="Highly qualified, innovative hospital">Highly qualified, innovative hospital</li>
+                                <li data-ar="جيم وسبا ومطاعم مع خصومات كبيرة" data-en="Gym, spa, restaurants with huge discounts">Gym, spa, restaurants with huge discounts</li>
+                            </ul>
+                        </div>
+
+                         <div class="info-card">
+                            <h3 data-ar="أنواع العقارات" data-en="Property Types">Property Types</h3>
+                            <div class="unit-types">
+                                <div class="unit-type">
+                                    <span class="unit-name" data-ar="استوديو - 63 م²" data-en="Studios - 63 sq.m">Studios - 63 sq.m</span>
+                                </div>
+                                <div class="unit-type">
+                                    <span class="unit-name" data-ar="شقة غرفة نوم - 72-90 م²" data-en="One bedroom - 72-90 sq.m">One bedroom - 72-90 sq.m</span>
+                                </div>
+                                <div class="unit-type">
+                                    <span class="unit-name" data-ar="فيلا توأم - 288 م²" data-en="Twin villas - 288 sq.m">Twin villas - 288 sq.m</span>
+                                </div>
+                                <div class="unit-type">
+                                    <span class="unit-name" data-ar="تاون هاوس - 288 م²" data-en="Townhouses - 288 sq.m">Townhouses - 288 sq.m</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <h3 data-ar="الأسعار" data-en="Prices">Prices</h3>
+                            <div class="pricing-info">
+                                <div class="price-item">
+                                    <span class="price">3,000,000 EGP</span>
+                                    <span class="unit" data-ar="للاستوديو" data-en="for Studio">for Studio</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price">3,700,000 EGP</span>
+                                    <span class="unit" data-ar="لغرفة نوم واحدة" data-en="for One Bedroom">for One Bedroom</span>
+                                </div>
+                            </div>
+                        </div>
+                          <div class="info-card">
+                            <h3 data-ar="خطط الدفع" data-en="Payment Plans">Payment Plans</h3>
+                            <div class="payment-plans">
+                                <div class="payment-option">
+                                    <span class="plan-details" data-ar="25% مقدم - 3 سنوات أقساط" data-en="25% down payment - 3 year installments">25% down payment - 3 year installments</span>
+                                </div>
+                                <div class="payment-option">
+                                    <span class="plan-details" data-ar="35% مقدم - 4 سنوات أقساط" data-en="35% down payment - 4 year installments">35% down payment - 4 year installments</span>
+                                </div>
+                            </div>
+                        </div>
+                          <div class="special-offer-card">
+                            <h4 data-ar="عروض خاصة" data-en="Special Offers">عروض خاصة</h4>
+                            <p data-ar="خصم 20% للدفع كاملاً + خصم إضافي 10%" data-en="20% discount for full payment + additional 10% discount">20% discount for full payment + additional 10% discount</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center mt-5">
+                <a href="index.html" class="thm-btn">
+                                    <em data-ar="العودة الي الرئيسية" data-en="Back To Home" > Back To Home</em>
+                                        <span><i class="fas fa-arrow-right"></i></span>
+                </a>
+          </div>
+            
+        </div>
+    </section>
+     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/script.js"></script>
+   
+</body>
+</html>

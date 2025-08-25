@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" dir="lrt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-ar="الفيافي للخدمات اللوجستية" data-en="AL-FIAFI Logistic services">AL-FIAFI Logistic services</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link href="css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80" tabindex="0">
+
+
+     <nav id="navbar" class="navbar navbar-expand-xl  fixed-top">
+        <div class="container navbar-container">
+            <a class="navbar-brand fw-bold text-white" href="index.html">
+                <img src="imgs/logo.png" alt="">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                      <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mt-5 mt-xl-0 mx-auto d-flex justify-content-center align-items-center gap-3 gap-lg-4 mb-4 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="الرئيسية" data-en="Home" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="من نحن" data-en="About"  href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="المشاريع" data-en="Projects"  href="index.html#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="تشطيبات وديكور" data-en="Decorating & Finishing"  href="index.html">Decorating & Finishing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="اثاث منزلي" data-en="Furniture"  href="index.html">Furniture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="المدونة" data-en="Blogs"  href="index.html#blogs">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="الفريق" data-en="Team"  href="index.html#team">Team</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="اتصل بنا" data-en="Contact"  href="index.html#contact">Contact</a>
+                    </li>
+                   
+                </ul>
+                
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                    <button class="btn btn-outline-light btn-lang me-2" id="langBtn">
+                        <i class="fas fa-language"></i>
+                        AR
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="section-padding">
+        <div class="container" data-aos="fade-up" data-aos-duration="1200">
+            <div class="row pt-5">
+                <div class="col-12">
+                    <div class="project-header">
+                        <h1 class="project-title" data-ar="كالا سهل حشيش" data-en="CALA Sahl Hashish">CALA Sahl Hashish</h1>
+                        <p class="project-location" data-ar="ساحل البحر الأحمر، مصر" data-en="Red Sea Coast, Egypt">Red Sea Coast, Egypt</p>
+                    </div>
+                </div>
+            </div>
+             <div class="row g-4">
+                <!-- Image Gallery -->
+                <div class="col-lg-8">
+                    <div class="image-gallery">
+                        <div class="main-image-container">
+                            <img id="mainImage" src="imgs/project-1-11.jpg" alt="CALA Sahl Hasheesh" class="main-image">
+                            <div class="image-overlay">
+                                <button class="btn btn-light btn-sm" onclick="openFullscreen()">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="image-slider">
+                            <div class="slider-container">
+                                <div class="slider-item active" onclick="changeImage(this, 'imgs/project-1-11.jpg')">
+                                    <img src="imgs/project-1-11.jpg" alt="Main View">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-1-1.jpg')">
+                                    <img src="imgs/project-1-1.jpg" alt="Beach View">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-1-2.jpg')">
+                                    <img src="imgs/project-1-2.jpg" alt="Pool Area">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-1-3.jpg')">
+                                    <img src="imgs/project-1-3.jpg" alt="Interior">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-1-4.jpg')">
+                                    <img src="imgs/project-1-4.jpg" alt="Amenities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-1-5.jpg')">
+                                    <img src="imgs/project-1-5.jpg" alt="Amenities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-1-6.jpg')">
+                                    <img src="imgs/project-1-6.jpg" alt="Amenities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-1-7.jpg')">
+                                    <img src="imgs/project-1-7.jpg" alt="Amenities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-1-8.jpg')">
+                                    <img src="imgs/project-1-8.jpg" alt="Amenities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-1-9.jpg')">
+                                    <img src="imgs/project-1-9.jpg" alt="Amenities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-1-10.jpg')">
+                                    <img src="imgs/project-1-10.jpg" alt="Amenities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-1-12.jpg')">
+                                    <img src="imgs/project-1-12.jpg" alt="Amenities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-1-13.jpg')">
+                                    <img src="imgs/project-1-13.jpg" alt="Amenities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-1-14.jpg')">
+                                    <img src="imgs/project-1-14.jpg" alt="Amenities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-1-15.jpg')">
+                                    <img src="imgs/project-1-15.jpg" alt="Amenities">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="detailed-description">
+                        <h2 data-ar="وصف مفصل" data-en="Detailed Description">Detailed Description</h2>
+                        <p data-ar="كالا سهل حشيش ليست مجرد منتجع، بل هي مجتمعٌ قائمٌ على الفخامة والاسترخاء والمغامرة. صُممت كالا بهندسة معمارية عصرية ومساحاتٍ مُدروسة بعناية، وتوفر مزيجًا متناغمًا من المساحات التفاعلية والهدوء. سواءً كنت تخطط لجعلها مسكنك الدائم أو عقارًا استثماريًا، فإن كالا سهل حشيش تقدم جودةً لا مثيل لها في البناء والتصميم." data-en="Cala Sahl Hasheesh is more than just a resort—it’s a community built around luxury, relaxation, and adventure. Designed with modern architecture and thoughtful spaces, Cala offers a harmonious blend of interactive areas and quiet retreats. Whether you’re planning to make it your permanent home or an investment property, Cala Sahl Hasheesh delivers unmatched quality in construction and design.">
+                            Cala Sahl Hasheesh is more than just a resort—it’s a community built around luxury, relaxation, and adventure. Designed with modern architecture and thoughtful spaces, Cala offers a harmonious blend of interactive areas and quiet retreats. Whether you’re planning to make it your permanent home or an investment property, Cala Sahl Hasheesh delivers unmatched quality in construction and design.
+                        </p>
+                    </div>
+                
+                </div>
+
+
+                <!-- Project Information -->
+                <div class="col-lg-4">
+                    <div class="project-info">
+                        <div class="info-card">
+                            <h3 data-ar="نظرة عامة" data-en="Overview">نظرة عامة</h3>
+                            <p data-ar="يقع منتجع كالا سهل حشيش الفاخر على ساحل البحر الأحمر المصري الخلاب، وهو مصمم خصيصاً لمن يبحثون عن حياة فاخرة تجمع بين جمال الطبيعة. بشواطئه الخلابة ومياهه الصافية ومناظره الطبيعية الخلابة، يوفر هذا المنتجع ملاذاً مثالياً أو إقامة دائمة. يقع كالا سهل حشيش على بُعد 20 دقيقة فقط من مطار الغردقة الدولي، ويُعد وجهة مثالية للسياح والمستثمرين على حد سواء." data-en="Nestled along Egypt’s stunning Red Sea coast, Cala Sahl Hasheesh is a premium resort designed for those seeking luxury living combined with natural beauty. With pristine beaches, crystal-clear waters, and lush landscapes, this resort provides the perfect getaway or permanent residence. Located just 20 minutes from Hurghada International Airport, Cala Sahl Hasheesh is an ideal destination for both vacationers and investors.">
+Nestled along Egypt’s stunning Red Sea coast, Cala Sahl Hasheesh is a premium resort designed for those seeking luxury living combined with natural beauty. With pristine beaches, crystal-clear waters, and lush landscapes, this resort provides the perfect getaway or permanent residence. Located just 20 minutes from Hurghada International Airport, Cala Sahl Hasheesh is an ideal destination for both vacationers and investors.                            </p>
+                        </div>
+
+                        <div class="info-card">
+                            <h3 data-ar="المميزات الرئيسية" data-en="Key Highlights">المميزات الرئيسية</h3>
+                            <ul class="features-list">
+                                <li data-ar="مساحات معيشة حديثة مع إطلالات بانورامية على البحر الأحمر" data-en="Modern living spaces with panoramic views of the Red Sea">Modern living spaces with panoramic views of the Red Sea</li>
+                                <li data-ar="مجتمع متنامي يوازن بين الخصوصية والتواصل" data-en="A growing community that balances privacy and connectivity">A growing community that balances privacy and connectivity</li>
+                                <li data-ar="شواطئ نقية ومياه صافية كالكريستال" data-en="Pristine beaches and crystal-clear waters">Pristine beaches and crystal-clear waters</li>
+                                <li data-ar="تصميم معماري حديث ومساحات مدروسة" data-en="Modern architecture and thoughtful spaces">Modern architecture and thoughtful spaces</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card">
+                            <h3 data-ar="خطط الدفع المرنة" data-en="Flexible Payment Plans">Flexible Payment Plans</h3>
+                            <div class="payment-plans">
+                                <div class="payment-option">
+                                    <span class="plan-title" data-ar="الخطة الأولى" data-en="Plan 1">Plan 1</span>
+                                    <span class="plan-details" data-ar="10% مقدم - 5 سنوات أقساط متساوية" data-en="10% down - 5 years equal installments">10% down - 5 years equal installments</span>
+                                </div>
+                                <div class="payment-option">
+                                    <span class="plan-title" data-ar="الخطة الثانية" data-en="Plan 2">Plan 2</span>
+                                    <span class="plan-details" data-ar="15% مقدم - 6 سنوات أقساط متساوية" data-en="15% down - 6 years equal installments">15% down - 6 years equal installments</span>
+                                </div>
+                                <div class="payment-option">
+                                    <span class="plan-title" data-ar="الخطة الثالثة" data-en="Plan 3">Plan 3</span>
+                                    <span class="plan-details" data-ar="25% مقدم - 7 سنوات أقساط" data-en="25% down - 7 years installments">25% down - 7 years installments</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center mt-5">
+            <a href="index.html" class="thm-btn">
+                                   <em data-ar="العودة الي الرئيسية" data-en="Back To Home" > Back To Home</em>
+                                    <span><i class="fas fa-arrow-right"></i></span>
+            </a>
+          </div>
+        </div>
+    </section>
+     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/script.js"></script>
+   
+</body>
+</html>

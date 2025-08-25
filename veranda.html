@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" dir="lrt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-ar="الفيافي للخدمات اللوجستية" data-en="AL-FIAFI Logistic services">AL-FIAFI Logistic services</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link href="css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80" tabindex="0">
+
+
+     <nav id="navbar" class="navbar navbar-expand-xl  fixed-top">
+        <div class="container navbar-container">
+            <a class="navbar-brand fw-bold text-white" href="index.html">
+                <img src="imgs/logo.png" alt="">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                      <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mt-5 mt-xl-0 mx-auto d-flex justify-content-center align-items-center gap-3 gap-lg-4 mb-4 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="الرئيسية" data-en="Home" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="من نحن" data-en="About"  href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="المشاريع" data-en="Projects"  href="index.html#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="تشطيبات وديكور" data-en="Decorating & Finishing"  href="index.html">Decorating & Finishing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="اثاث منزلي" data-en="Furniture"  href="index.html">Furniture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="المدونة" data-en="Blogs"  href="index.html#blogs">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="الفريق" data-en="Team"  href="index.html#team">Team</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="اتصل بنا" data-en="Contact"  href="index.html#contact">Contact</a>
+                    </li>
+                   
+                </ul>
+                
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                    <button class="btn btn-outline-light btn-lang me-2" id="langBtn">
+                        <i class="fas fa-language"></i>
+                        AR
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+<section class="project-detail-section section-padding">
+        <div class="container" data-aos="fade-up" data-aos-duration="1200">
+            <div class="row pt-5">
+                <div class="col-12">
+                    <div class="project-header">
+                        <h1 class="project-title" data-ar="فيراندا سهل حشيش" data-en="Veranda Sahl Hasheesh">فيراندا سهل حشيش</h1>
+                        <p class="project-location" data-ar="خليج سهل حشيش، الغردقة" data-en="Sahl Hasheesh Bay, Hurghada">خليج سهل حشيش، الغردقة</p>
+                        <div class="project-badge offer">
+                            <span data-ar="عرض محدود - خصم 30%" data-en="Limited Offer - 30% Discount">عرض محدود - خصم 30%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="image-gallery">
+                        <div class="main-image-container">
+                            <img id="mainImage" src="imgs/project-3-1.jpg" alt="Scandic Beach Resort" class="main-image">
+                            <div class="image-overlay">
+                                <button class="btn btn-light btn-sm" onclick="openFullscreen()">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="image-slider">
+                            <div class="slider-container">
+                                <div class="slider-item active" onclick="changeImage(this, 'imgs/project-3-1.jpg')">
+                                    <img src="imgs/project-3-1.jpg" alt="Main View">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-2.jpg')">
+                                    <img src="imgs/project-3-2.jpg" alt="Sea View">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-3.jpg')">
+                                    <img src="imgs/project-3-3.jpg" alt="Pool View">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-4.jpg')">
+                                    <img src="imgs/project-3-4.jpg" alt="Apartments">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-5.jpg')">
+                                    <img src="imgs/project-3-5.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-6.jpg')">
+                                    <img src="imgs/project-3-6.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-7.jpg')">
+                                    <img src="imgs/project-3-7.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-8.jpg')">
+                                    <img src="imgs/project-3-8.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-9.jpg')">
+                                    <img src="imgs/project-3-9.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-10.mp4')">
+                                    <video src="imgs/project-3-10.mp4" alt="Facilities" muted autoplay loop></video>
+                                </div>
+
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-11.jpg')">
+                                    <img src="imgs/project-3-11.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-12.jpg')">
+                                    <img src="imgs/project-3-12.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-13.jpg')">
+                                    <img src="imgs/project-3-13.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-14.jpg')">
+                                    <img src="imgs/project-3-14.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-15.jpg')">
+                                    <img src="imgs/project-3-15.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-16.jpg')">
+                                    <img src="imgs/project-3-16.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-17.jpg')">
+                                    <img src="imgs/project-3-17.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-18.jpg')">
+                                    <img src="imgs/project-3-18.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-19.jpg')">
+                                    <img src="imgs/project-3-19.jpg" alt="Facilities">
+                                </div>
+                               <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-20.mp4')">
+    <video src="imgs/project-3-20.mp4" alt="Facilities" muted autoplay loop></video>
+</div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-21.jpg')">
+                                    <img src="imgs/project-3-21.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-22.jpg')">
+                                    <img src="imgs/project-3-22.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-23.jpg')">
+                                    <img src="imgs/project-3-23.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-24.jpg')">
+                                    <img src="imgs/project-3-24.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-25.jpg')">
+                                    <img src="imgs/project-3-25.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-26.jpg')">
+                                    <img src="imgs/project-3-26.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-27.jpg')">
+                                    <img src="imgs/project-3-27.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-28.jpg')">
+                                    <img src="imgs/project-3-28.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-29.jpg')">
+                                    <img src="imgs/project-3-29.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-30.jpg')">
+                                    <img src="imgs/project-3-30.jpg" alt="Facilities">
+                                </div>
+                                <div class="slider-item" onclick="changeImage(this, 'imgs/project-3-31.jpg')">
+                                    <img src="imgs/project-3-31.jpg" alt="Facilities">
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                     <div class="special-offer-card">
+                            <h4 data-ar="عرض لفترة محدودة" data-en="Limited Time Offer">عرض لفترة محدودة</h4>
+                            <p data-ar="خصم 30% للدفع كاش" data-en="30% discount on cash payment">خصم 30% للدفع كاش</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="project-info">
+                        <div class="info-card">
+                            <h3 data-ar="نظرة عامة" data-en="Overview">Overview</h3>
+                           <p data-ar="موقع استراتيجي على خليج سهل حشيش الساحر مع مجموعة من الخدمات والمرافق التي توفر ملاذاً حميماً لقضاء العطلات." data-en="Strategically located on the enrapturing Sahl Hasheesh bay and equipped with a collection of services and amenities that provide an intimate holiday getaway.">
+                                موقع استراتيجي على خليج سهل حشيش الساحر مع مجموعة من الخدمات والمرافق التي توفر ملاذاً حميماً لقضاء العطلات.
+                            </p>
+                        </div>
+                        <div class="info-card">
+                            <h3 data-ar="مساحة المشروع" data-en="Project Area">مساحة المشروع</h3>
+                            <p data-ar="130,000 متر مربع (المرحلة الأولى والثانية)" data-en="130,000 m² (Phase One and Two)">130,000 متر مربع (المرحلة الأولى والثانية)</p>
+                        </div>
+                        <div class="info-card">
+                            <h3 data-ar="الخدمات والمرافق" data-en="Services & Amenities">الخدمات والمرافق</h3>
+                            <ul class="features-list">
+                                <li data-ar="حمامات سباحة" data-en="Swimming pools">حمامات سباحة</li>
+                                <li data-ar="وصول للشاطئ" data-en="Beach access">وصول للشاطئ</li>
+                                <li data-ar="جيم وسبا" data-en="Gym and spa">جيم وسبا</li>
+                                <li data-ar="بار المسبح" data-en="Pool bar">بار المسبح</li>
+                                <li data-ar="مطعم" data-en="Restaurant">مطعم</li>
+                                <li data-ar="ملاعب تنس وكرة قدم" data-en="Tennis and football courts">ملاعب تنس وكرة قدم</li>
+                                <li data-ar="ملعب كروكيت" data-en="Croquet court">ملعب كروكيت</li>
+                                <li data-ar="قسم الإيجار" data-en="Rental department">قسم الإيجار</li>
+                                <li data-ar="عربات جولف" data-en="Golf cars">عربات جولف</li>
+                                <li data-ar="سوبر ماركت" data-en="Supermarket">سوبر ماركت</li>
+                                <li data-ar="صيدلية" data-en="Pharmacy">صيدلية</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card">
+                            <h3 data-ar="خطة الدفع" data-en="Payment Plan">خطة الدفع</h3>
+                            <div class="payment-plans">
+                                <div class="payment-option">
+                                    <span class="plan-details" data-ar="15% مقدم - 85% أقساط ربع سنوية على 6 سنوات" data-en="15% down payment - 85% quarterly installments over 6 years">15% مقدم - 85% أقساط ربع سنوية على 6 سنوات</span>
+                                </div>
+                                <div class="delivery-info">
+                                    <span data-ar="التسليم خلال 2.5 سنة" data-en="Delivery in 2.5 years">التسليم خلال 2.5 سنة</span>
+                                </div>
+                                <div class="maintenance-info">
+                                    <span data-ar="رسوم الصيانة 10% تُدفع عند التسليم" data-en="Maintenance fees 10% to be paid on delivery">رسوم الصيانة 10% تُدفع عند التسليم</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+
+
+                    </div>
+                </div>
+            </div>
+             <div class="d-flex justify-content-center align-items-center mt-5">
+            <a href="index.html" class="thm-btn">
+                                   <em data-ar="العودة الي الرئيسية" data-en="Back To Home" > Back To Home</em>
+                                    <span><i class="fas fa-arrow-right"></i></span>
+            </a>
+          </div>
+            
+        </div>
+    </section>
+     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/script.js"></script>
+   
+</body>
+</html>
