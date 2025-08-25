@@ -1367,13 +1367,17 @@ h1, h2, h3, h4, h5, h6 {
         content: "";
         background-image: url(../imgs/team-shape.svg);
         position: absolute;
-        top: 78%;
+        top: 88%;
         left: 0%;
         height: 60%;
         width: 100%;
         z-index: 14;
     }
-    
+    @media screen and (min-width:521px) {
+        .team .container .card .img::after {
+        top: 78%;   
+    }
+    }
     .team .container .img .icons {
         display: flex;
         flex-direction: column;
