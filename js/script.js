@@ -8,25 +8,39 @@ function initializeProjectDetail() {
 
 
 function changeImage(clickedItem, newSrc) {
-    const mainImage = document.getElementById('mainImage');
+    const mainImageContainer = document.querySelector('.main-image-container');
     const allSliderItems = document.querySelectorAll('.slider-item');
 
     allSliderItems.forEach(item => item.classList.remove('active'));
     clickedItem.classList.add('active');
 
-    mainImage.classList.add('changing');
+    const currentMedia = mainImageContainer.querySelector('#mainImage');
+    if (currentMedia) currentMedia.remove();
 
+
+    let newMedia;
+    if (newSrc.endsWith('.mp4')) {
+        newMedia = document.createElement('video');
+        newMedia.id = 'mainImage';
+        newMedia.className = 'main-image';
+        newMedia.src = newSrc;
+        newMedia.controls = true;
+        newMedia.autoplay = true;
+        newMedia.loop = true;
+        newMedia.muted = true;
+    } else {
+        newMedia = document.createElement('img');
+        newMedia.id = 'mainImage';
+        newMedia.className = 'main-image'; 
+        newMedia.src = newSrc;
+        newMedia.alt = clickedItem.querySelector('img').alt || "Main View";
+    }
+
+    newMedia.style.opacity = '0';
+    mainImageContainer.appendChild(newMedia);
     setTimeout(() => {
-        if (newSrc.endsWith('.mp4')) {
-            mainImage.outerHTML = `
-                <video id="mainImage" class="main-media" src="${newSrc}" controls autoplay loop muted></video>
-            `;
-        } else {
-            mainImage.outerHTML = `
-                <img id="mainImage" class="main-media" src="${newSrc}" alt="Main View">
-            `;
-        }
-    }, 250);
+        newMedia.style.opacity = '1';
+    }, 10);
 }
 
 
