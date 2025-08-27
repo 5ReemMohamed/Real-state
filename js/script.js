@@ -1,25 +1,20 @@
-function initializeProjectDetail() {
-   
-    updateTranslations();
-  
-    initializeImageSlider();
-    
+function getCurrentLang() {
+    return localStorage.getItem("siteLang") || "en";
 }
 
+function initializeProjectDetail() {
+    updateTranslations();
+    initializeImageSlider();
+}
 
-function changeImage(clickedItem, newSrc) {
+function changeImage(newSrc, altText = "Main View", isVideo = false) {
     const mainImageContainer = document.querySelector('.main-image-container');
-    const allSliderItems = document.querySelectorAll('.slider-item');
-
-    allSliderItems.forEach(item => item.classList.remove('active'));
-    clickedItem.classList.add('active');
-
     const currentMedia = mainImageContainer.querySelector('#mainImage');
+
     if (currentMedia) currentMedia.remove();
 
-
     let newMedia;
-    if (newSrc.endsWith('.mp4')) {
+    if (isVideo) {
         newMedia = document.createElement('video');
         newMedia.id = 'mainImage';
         newMedia.className = 'main-image';
@@ -31,9 +26,9 @@ function changeImage(clickedItem, newSrc) {
     } else {
         newMedia = document.createElement('img');
         newMedia.id = 'mainImage';
-        newMedia.className = 'main-image'; 
+        newMedia.className = 'main-image';
         newMedia.src = newSrc;
-        newMedia.alt = clickedItem.querySelector('img').alt || "Main View";
+        newMedia.alt = altText;
     }
 
     newMedia.style.opacity = '0';
@@ -43,27 +38,17 @@ function changeImage(clickedItem, newSrc) {
     }, 10);
 }
 
-
 function initializeImageSlider() {
-    const sliderItems = document.querySelectorAll('.slider-item');
-    
+    const sliderItems = document.querySelectorAll('.swiper-slide');
+
     sliderItems.forEach((item, index) => {
-        item.addEventListener('mouseenter', function() {
-            if (!this.classList.contains('active')) {
-                this.style.transform = 'scale(1.05)';
-                this.style.opacity = '1';
-                this.style.filter = 'grayscale(0%)';
+        item.addEventListener('click', function () {
+            const img = this.querySelector('img');
+            if (img) {
+                changeImage(img.src, img.alt);
             }
         });
-        
-        item.addEventListener('mouseleave', function() {
-            if (!this.classList.contains('active')) {
-                this.style.transform = '';
-                this.style.opacity = '';
-                this.style.filter = '';
-            }
-        });
-        
+
         item.style.animationDelay = `${index * 0.1}s`;
         item.classList.add('fade-in');
     });
@@ -71,13 +56,12 @@ function initializeImageSlider() {
 
 function openFullscreen() {
     const mainImage = document.getElementById('mainImage');
-
     const isVideo = mainImage.tagName.toLowerCase() === 'video';
     const src = mainImage.src;
 
     const overlay = createFullscreenOverlay(src, isVideo);
     document.body.appendChild(overlay);
-    
+
     setTimeout(() => {
         overlay.classList.add('active');
     }, 10);
@@ -103,26 +87,25 @@ function createFullscreenOverlay(src, isVideo = false) {
         `;
     }
 
-    overlay.addEventListener('click', function(e) {
+    overlay.addEventListener('click', function (e) {
         if (e.target === overlay) {
             closeFullscreen(overlay.querySelector('.fullscreen-close'));
         }
     });
-    
-    document.addEventListener('keydown', function(e) {
+
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
             closeFullscreen(overlay.querySelector('.fullscreen-close'));
         }
     });
-    
+
     return overlay;
 }
-
 
 function closeFullscreen(button) {
     const overlay = button.closest('.fullscreen-overlay');
     overlay.classList.remove('active');
-    
+
     setTimeout(() => {
         overlay.remove();
     }, 300);
@@ -130,8 +113,7 @@ function closeFullscreen(button) {
 
 function updateTranslations() {
     const langBtn = document.getElementById("langBtn");
-
-    let currentLang = localStorage.getItem("siteLang") || "en";
+    let currentLang = getCurrentLang();
 
     document.querySelectorAll("[data-ar]").forEach(node => {
         if (!(node instanceof HTMLElement)) return;
@@ -167,28 +149,70 @@ function updateTranslations() {
 
 function toggleLanguage() {
     const langBtn = document.getElementById("langBtn");
-
     if (langBtn) {
         langBtn.addEventListener("click", () => {
-            let currentLang = localStorage.getItem("siteLang") || "en";
-
+            let currentLang = getCurrentLang();
             currentLang = currentLang === "en" ? "ar" : "en";
-
             localStorage.setItem("siteLang", currentLang);
-
             updateTranslations();
+
+            initializeSwiper();
         });
     }
 }
 
+function initializeSwiper() {
+    const currentLang = getCurrentLang();
+    const isRTL = currentLang === "ar";
 
+    if (window.mySwiper) {
+        window.mySwiper.destroy(true, true);
+    }
 
+    window.mySwiper = new Swiper(".mySwiper", {
+        slidesPerView: 5,
+        spaceBetween: 12,
+        rtl: isRTL, 
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            320: { slidesPerView: 2, spaceBetween: 8 },
+            576: { slidesPerView: 3, spaceBetween: 10 },
+            768: { slidesPerView: 4, spaceBetween: 12 },
+            1200: { slidesPerView: 6, spaceBetween: 15 }
+        }
+    });
+
+    initializeImageSlider();
+}
 
 document.addEventListener("DOMContentLoaded", function () {
+    const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+        target: "#navbar",
+        offset: 80
+    });
+
+    window.addEventListener("load", () => {
+        scrollSpy.refresh();
+    });
+
+    const navLinks = document.querySelectorAll("#navbar .nav-link");
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            navLinks.forEach(l => l.classList.remove("active"));
+            this.classList.add("active");
+        });
+    });
     initializeProjectDetail();
-    
     toggleLanguage();
-    
+    initializeSwiper(); 
+
     document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
         link.addEventListener('click', () => {
             const navbarToggler = document.querySelector('.navbar-collapse');
@@ -203,3 +227,23 @@ document.addEventListener("DOMContentLoaded", function () {
         once: false
     });
 });
+
+document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const name = document.querySelector('[name="name"]').value;
+  const email = document.querySelector('[name="email"]').value;
+  const phone = document.querySelector('[name="phone"]').value;
+  const project = document.querySelector('[name="project"]').value;
+  const message = document.querySelector('[name="message"]').value;
+
+  const whatsappNumber = "201094920727"; 
+
+  const text = `Hello, I would like to contact you:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nProject: ${project}\nMessage: ${message}`;
+
+  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+  window.open(url, '_blank');
+
+  this.reset();
+});
+

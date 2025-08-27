@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" dir="lrt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-ar="الفيافي للخدمات اللوجستية" data-en="AL-FIAFI Logistic services">AL-FIAFI Logistic services</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link href="css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80" tabindex="0">
+
+
+     <nav id="navbar" class="navbar navbar-expand-xl  fixed-top">
+        <div class="container navbar-container">
+            <a class="navbar-brand fw-bold text-white" href="index.html">
+                <img src="imgs/logo.png" alt="logo">
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                      <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mt-5 mt-xl-0 mx-auto d-flex justify-content-center align-items-center gap-3 gap-lg-4 mb-4 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="الرئيسية" data-en="Home" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="من نحن" data-en="About"  href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="المشاريع" data-en="Projects"  href="index.html#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="تشطيبات وديكور" data-en="Decorating & Finishing"  href="#decore">Decorating & Finishing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="اثاث منزلي" data-en="Furniture"  href="furniture.html">Furniture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="الفريق" data-en="Team"  href="index.html#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="المدونة" data-en="Blogs"  href="index.html#blogs">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-ar="اتصل بنا" data-en="Contact"  href="index.html#contact">Contact</a>
+                    </li>
+                   
+                </ul>
+                
+                <div class="d-flex align-items-center justify-content-center gap-3">
+                    <button class="btn btn-outline-light btn-lang me-2" id="langBtn">
+                        <i class="fas fa-language"></i>
+                        AR
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+<section class="section-padding" id="decore">
+    <div class="container">
+        <div class="row pt-5">
+                <div class="col-12">
+                    <div class="project-header">
+                        <h1 class="project-title" data-ar="الديكور والتشطيبات"  data-en="Decorating & Finishing">
+                            Decorating & Finishing
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 mt-4 justify-content-center ">
+                <div class="col-lg-8">
+                    <div class="image-gallery">
+                        <div class="main-image-container">
+                        <img id="mainImage" src="imgs/decore/img1.jpg" alt="CALA Sahl Hasheesh" class="main-image">
+                        <div class="image-overlay">
+                            <button class="btn btn-light btn-sm" onclick="openFullscreen()">
+                            <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                        </div>
+
+                        <div class="swiper mySwiper mt-3">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide active" onclick="changeImage(this, 'imgs/decore/img1.jpg')">
+                            <img src="imgs/decore/img1.jpg" alt="Main View">
+                            </div>
+                            <div class="swiper-slide" onclick="changeImage(this, 'imgs/decore/img2.jpg')">
+                            <img src="imgs/decore/img2.jpg" alt="Beach View">
+                            </div>
+                            <div class="swiper-slide" onclick="changeImage(this, 'imgs/decore/img3.jpg')">
+                            <img src="imgs/decore/img3.jpg" alt="Pool Area">
+                            </div>
+                            <div class="swiper-slide" onclick="changeImage(this, 'imgs/decore/img4.jpg')">
+                            <img src="imgs/decore/img4.jpg" alt="Interior">
+                            </div>
+                            <div class="swiper-slide" onclick="changeImage(this, 'imgs/decore/img5.jpg')">
+                            <img src="imgs/decore/img5.jpg" alt="Amenities">
+                            </div>
+                            <div class="swiper-slide" onclick="changeImage(this, 'imgs/decore/img6.jpg')">
+                            <img src="imgs/decore/img6.jpg" alt="Amenities">
+                            </div>
+                            <div class="swiper-slide" onclick="changeImage(this, 'imgs/decore/img7.jpg')">
+                            <img src="imgs/decore/img7.jpg" alt="Amenities">
+                            </div>
+                            <div class="swiper-slide" onclick="changeImage(this, 'imgs/decore/img8.jpg')">
+                            <img src="imgs/decore/img8.jpg" alt="Amenities">
+                            </div>
+                            <div class="swiper-slide" onclick="changeImage(this, 'imgs/decore/img9.jpg')">
+                            <img src="imgs/decore/img9.jpg" alt="Amenities">
+                            </div>
+                            <div class="swiper-slide" onclick="changeImage(this, 'imgs/decore/img10.jpg')">
+                            <img src="imgs/decore/img10.jpg" alt="Amenities">
+                            </div>
+                            <div class="swiper-slide" onclick="changeImage(this, 'imgs/decore/img11.jpg')">
+                            <img src="imgs/decore/img11.jpg" alt="Amenities">
+                            </div>
+                            <div class="swiper-slide" onclick="changeImage(this, 'imgs/decore/img12.jpg')">
+                            <img src="imgs/decore/img12.jpg" alt="Amenities">
+                            </div>
+                            <div class="swiper-slide" onclick="changeImage(this, 'imgs/decore/img13.jpg')">
+                            <img src="imgs/decore/img13.jpg" alt="Amenities">
+                            </div>
+                            <div class="swiper-slide" onclick="changeImage(this, 'imgs/decore/img14.jpg')">
+                            <img src="imgs/decore/img14.jpg" alt="Amenities">
+                            </div>
+                            <div class="swiper-slide" onclick="changeImage(this, 'imgs/decore/img15.jpg')">
+                            <img src="imgs/decore/img15.jpg" alt="Amenities">
+                            </div>
+                            <div class="swiper-slide" onclick="changeImage(this, 'imgs/decore/img16.jpg')">
+                            <img src="imgs/decore/img16.jpg" alt="Amenities">
+                            </div>
+                            <div class="swiper-slide" onclick="changeImage(this, 'imgs/decore/img17.jpg')">
+                            <img src="imgs/decore/img17.jpg" alt="Amenities">
+                            </div>
+                            <div class="swiper-slide" onclick="changeImage(this, 'imgs/decore/img18.jpg')">
+                            <img src="imgs/decore/img18.jpg" alt="Amenities">
+                            </div>
+                            <div class="swiper-slide" onclick="changeImage(this, 'imgs/decore/img19.jpg')">
+                            <img src="imgs/decore/img19.jpg" alt="Amenities">
+                            </div>
+                            <div class="swiper-slide" onclick="changeImage(this, 'imgs/decore/img20.jpg')">
+                            <img src="imgs/decore/img20.jpg" alt="Amenities">
+                            </div>
+                            <div class="swiper-slide" onclick="changeImage(this, 'imgs/decore/img21.jpg')">
+                            <img src="imgs/decore/img21.jpg" alt="Amenities">
+                            </div>
+                            <div class="swiper-slide" onclick="changeImage(this, 'imgs/decore/img22.jpg')">
+                            <img src="imgs/decore/img22.jpg" alt="Amenities">
+                            </div>
+                       
+                        </div>
+
+                        <!-- Navigation -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row g-4 mt-3">
+                        <div class="col-12">
+                              <div class="project-info">
+                        <div class="info-card">
+                            <h3 data-ar="خبرتنا" data-en="Our Expertise">Our Expertise</h3>
+                            <p data-ar="مجموعة سباسينفيست شريككم الموثوق لحلول التشطيب الداخلي والخارجي الراقية. نقدم خدمات متكاملة للمنازل السكنية، والمساحات التجارية، والمحلات التجارية، والمكاتب، والمطاعم، والكرفانات، وغيرها." 
+                               data-en="Your Spacinvest group is your trusted partner for high-end interior and exterior finishing solutions. We offer fully integrated services for residential homes, commercial spaces, retail shops, offices, restaurants, caravans, and more.">
+                                Your Spacinvest group is your trusted partner for high-end interior and exterior finishing solutions. We offer fully integrated services for residential homes, commercial spaces, retail shops, offices, restaurants, caravans, and more.
+                            </p>
+                        </div>
+
+                    </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="project-info">
+                        <div class="info-card">
+                            <h3 data-ar="قصة الشركة" data-en="Company story">Company story</h3>
+                            <p data-ar="رحلة شركتنا. تأسست شركة فيت آوت عام ٢٠١٨، انطلاقًا من رؤية واضحة، تهدف إلى إنشاء مساحات جميلة وعملية ومصممة هندسيًا بدقة، تعكس تطلعات عملائنا. بدعم من مهندسين ذوي خبرة عملية منذ عام ٢٠١١، تطورنا لنصبح اسمًا موثوقًا به في عالم التشطيبات الداخلية والديكور في مصر." 
+                               data-en="Our Company Journey
+Founded in 2018, FITOUT was born from a clear vision, to create beautiful, functional, and well-engineered spaces that reflect our clients’ aspirations. Backed by engineers with hands-on experience since 2011, we have grown to become a trusted name in the world of interior finishing and decoration in Egypt.">
+Our Company Journey
+Founded in 2018, FITOUT was born from a clear vision, to create beautiful, functional, and well-engineered spaces that reflect our clients’ aspirations. Backed by engineers with hands-on experience since 2011, we have grown to become a trusted name in the world of interior finishing and decoration in Egypt.                            </p>
+                        </div>
+
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+    </div>
+</section>
+     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/script.js"></script>
+   
+</body>
+</html>
